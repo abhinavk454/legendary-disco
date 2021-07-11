@@ -6,7 +6,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t cybe4punk/legendary-disco -f Dockefile.dev .
+    - docker build -t cybe4punk/legendary-disco -f Dockerfile.dev .
 
 script:
     - docker run -e CI=true cybe4punk/legendary-disco npm run test -- --coverage
